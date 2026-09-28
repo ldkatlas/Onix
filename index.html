@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Onix Burguer — Smash Burger artesanal, ingredientes selecionados e entrega quentinha.">
+  <title>Onix Burguer | Smash Burger Artesanal</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=13">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@600;700&family=Lilita+One&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+
+  <!-- Cursor personalizado (desktop) -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="custom-cursor-dot" id="customCursorDot" aria-hidden="true"></div>
+
+
+
+  <!-- =========================================================
+       HEADER — logo esquerda + navbar centro
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <!-- Logo canto superior esquerdo -->
+    <a href="#inicio" class="logo" aria-label="Onix Burguer — início">
+      <!-- Ícone hambúrguer BRANCO, sem círculo -->
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 18C8 13 15 10 24 10C33 10 40 13 40 18V20H8V18Z" fill="#FFFFFF"/>
+        <path d="M8 21C11 23 14 20 17 22C20 24 22 20 24 22C26 24 28 20 31 22C34 24 37 20 40 22V24H8V21Z" fill="#FFFFFF"/>
+        <rect x="9" y="24.5" width="30" height="5" rx="2.5" fill="#FFFFFF"/>
+        <path d="M8 31H40V34C40 37 33 39 24 39C15 39 8 37 8 34V31Z" fill="#FFFFFF"/>
+      </svg>
+      <span class="logo-text">Onix Burguer</span>
+    </a>
+
+    <!-- Navbar centralizada -->
+    <nav class="navbar" aria-label="Navegação principal">
+      <ul class="nav-list">
+        <li><a class="nav-link active" href="#inicio">Início</a></li>
+        <li><a class="nav-link" href="#cardapio">Cardápio</a></li>
+        <li><a class="nav-link" href="#sobre">Sobre nós</a></li>
+        <li><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão menu mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Painel menu mobile tela cheia -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <button class="mobile-close" id="menuClose" aria-label="Fechar menu">&times;</button>
+    <a class="nav-link active" href="#inicio">Início</a>
+    <a class="nav-link" href="#cardapio">Cardápio</a>
+    <a class="nav-link" href="#sobre">Sobre nós</a>
+    <a class="nav-link" href="#avaliacoes">Avaliações</a>
+    <a class="nav-link" href="#contato">Contato</a>
+  </div>
+
+  <main>
+
+    <!-- =========================================================
+         HERO — tela cheia
+         ========================================================= -->
+    <section class="hero" id="inicio" aria-label="Destaque Smash Burger">
+
+      <!-- Elementos decorativos de fundo (z-index 0) -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="bg-blob bg-blob-1" data-parallax="0.04"></div>
+        <div class="bg-blob bg-blob-2" data-parallax="0.06"></div>
+        <div class="bg-blob bg-blob-3" data-parallax="0.03"></div>
+
+        <!-- Ingredientes SVG soltos -->
+        <svg class="bg-ingredient bg-lettuce" data-parallax="0.08" viewBox="0 0 60 40" fill="none">
+          <path d="M5 20C10 8 20 5 30 12C40 5 50 10 55 22C48 32 35 35 30 28C25 35 12 30 5 20Z" fill="#FFFFFF" opacity="0.2"/>
+        </svg>
+        <svg class="bg-ingredient bg-tomato" data-parallax="0.05" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" stroke="#DCEBFF" stroke-width="2" opacity="0.3" fill="none"/>
+          <circle cx="20" cy="20" r="4" fill="#FFFFFF" opacity="0.2"/>
+        </svg>
+        <svg class="bg-ingredient bg-cheese" data-parallax="0.07" viewBox="0 0 50 30" fill="none">
+          <path d="M4 8 L46 4 L42 26 L6 24 Z" fill="#8CC4FF" opacity="0.18"/>
+        </svg>
+        <svg class="bg-ingredient bg-onion" data-parallax="0.04" viewBox="0 0 44 44" fill="none">
+          <circle cx="22" cy="22" r="18" stroke="#FFFFFF" stroke-width="2" opacity="0.22" fill="none"/>
+          <circle cx="22" cy="22" r="10" stroke="#DCEBFF" stroke-width="1.5" opacity="0.25" fill="none"/>
+        </svg>
+        <svg class="bg-ingredient bg-pickle" data-parallax="0.09" viewBox="0 0 30 50" fill="none">
+          <ellipse cx="15" cy="25" rx="10" ry="20" stroke="#FFFFFF" stroke-width="2" opacity="0.2" fill="none"/>
+          <circle cx="12" cy="18" r="1.5" fill="#DCEBFF" opacity="0.3"/>
+          <circle cx="18" cy="28" r="1.5" fill="#DCEBFF" opacity="0.3"/>
+          <circle cx="13" cy="34" r="1.2" fill="#DCEBFF" opacity="0.3"/>
+        </svg>
+        <svg class="bg-ingredient bg-sesame-1" data-parallax="0.1" viewBox="0 0 12 8" fill="none">
+          <ellipse cx="6" cy="4" rx="5" ry="2.5" fill="#FFFFFF" opacity="0.25"/>
+        </svg>
+        <svg class="bg-ingredient bg-sesame-2" data-parallax="0.06" viewBox="0 0 12 8" fill="none">
+          <ellipse cx="6" cy="4" rx="5" ry="2.5" fill="#DCEBFF" opacity="0.3"/>
+        </svg>
+        <svg class="bg-ingredient bg-sesame-3" data-parallax="0.08" viewBox="0 0 12 8" fill="none">
+          <ellipse cx="6" cy="4" rx="5" ry="2.5" fill="#FFFFFF" opacity="0.2"/>
+        </svg>
+
+        <!-- Estrelas e faíscas -->
+        <span class="bg-star bg-star-1" data-parallax="0.12">✦</span>
+        <span class="bg-star bg-star-2" data-parallax="0.07">✧</span>
+        <span class="bg-star bg-star-3" data-parallax="0.1">✦</span>
+        <span class="bg-dot bg-dot-1" data-parallax="0.05"></span>
+        <span class="bg-dot bg-dot-2" data-parallax="0.09"></span>
+        <span class="bg-dot bg-dot-3" data-parallax="0.04"></span>
+        <span class="bg-dot bg-dot-4" data-parallax="0.11"></span>
+        <span class="bg-spark bg-spark-1" data-parallax="0.08"></span>
+        <span class="bg-spark bg-spark-2" data-parallax="0.06"></span>
+      </div>
+
+      <!-- Centro do hero: textos + burger -->
+      <div class="hero-center">
+
+        <!-- Texto SMASH curvado (laterais para baixo) -->
+        <div class="hero-title-smash">
+          <svg class="title-curve-svg title-curve-smash" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet" aria-label="SMASH">
+            <defs>
+              <path id="curveSmash" d="M 30 155 Q 450 35 870 155"/>
+            </defs>
+            <text class="title-curve-text">
+              <textPath href="#curveSmash" xlink:href="#curveSmash" startOffset="50%" text-anchor="middle">SMASH</textPath>
+            </text>
+          </svg>
+        </div>
+
+        <!-- Imagem do burger (mais lateral + animações cinematográficas) -->
+        <div class="burger-wrap" id="burgerWrap">
+          <div class="burger-glow" aria-hidden="true"></div>
+          <div class="burger-float">
+            <img
+              class="burger-img"
+              src="burguer.png"
+              alt="Smash Burger Onix Burguer"
+              width="800"
+              height="800"
+            >
+            <div class="burger-shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Texto BURGUER curvado (laterais para cima) + decorações -->
+        <div class="hero-title-burguer">
+          <svg class="title-decor title-decor-left" viewBox="0 0 40 80" fill="none" aria-hidden="true">
+            <line class="decor-line" x1="28" y1="8" x2="8" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+            <line class="decor-line" x1="38" y1="8" x2="18" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+
+          <svg class="title-curve-svg title-curve-burguer" viewBox="0 0 980 200" preserveAspectRatio="xMidYMid meet" aria-label="BURGUER">
+            <defs>
+              <path id="curveBurguer" d="M 30 55 Q 490 175 950 55"/>
+            </defs>
+            <text class="title-curve-text">
+              <textPath href="#curveBurguer" xlink:href="#curveBurguer" startOffset="50%" text-anchor="middle">BURGUER</textPath>
+            </text>
+          </svg>
+
+          <svg class="title-decor title-decor-right" viewBox="0 0 40 80" fill="none" aria-hidden="true">
+            <line class="decor-line" x1="12" y1="8" x2="32" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+            <line class="decor-line" x1="2" y1="8" x2="22" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Canto inferior esquerdo — textos + botão (sem traço) -->
+      <div class="hero-left reveal-on-load">
+        <p class="hero-tagline">
+          <span>Hambúrguer artesanal</span>
+          <span>Ingredientes selecionados</span>
+          <span>Feito na hora pra você</span>
+        </p>
+        <a class="btn-cardapio magnetic" href="#cardapio">
+          <span class="btn-shine" aria-hidden="true"></span>
+          Ver Cardápio
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Canto inferior direito — motoboy + entrega -->
+      <div class="hero-right reveal-on-load">
+        <div class="delivery-bike" aria-hidden="true">
+          <img class="motoboy-img" src="motoboy.png?v=8" alt="Entrega quentinha" width="140" height="95">
+        </div>
+        <p class="delivery-text">
+          <span>Entrega</span>
+          <span>quentinha</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CARDÁPIO
+         ========================================================= -->
+    <section class="section section-cardapio" id="cardapio">
+      <!-- Ondulação suave de transição Hero -> Cardápio -->
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,22 C320,44 640,4 960,26 C1200,42 1360,12 1440,20 L1440,54 L0,54 Z" fill="var(--azul-base)"/></svg>
+      </div>
+
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 class="section-title" data-title-reveal>Nosso Cardápio</h2>
+          <p class="section-subtitle" data-animate>Smash artesanal, combos e acompanhamentos feitos na hora.</p>
+        </header>
+
+        <!-- Filtros de categoria -->
+        <div class="menu-filters" data-animate role="tablist" aria-label="Filtrar cardápio">
+          <button class="filter-btn active magnetic" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="filter-btn magnetic" data-filter="smash" role="tab" aria-selected="false">Smash</button>
+          <button class="filter-btn magnetic" data-filter="combos" role="tab" aria-selected="false">Combos</button>
+          <button class="filter-btn magnetic" data-filter="acompanhamentos" role="tab" aria-selected="false">Acompanhamentos</button>
+          <button class="filter-btn magnetic" data-filter="bebidas" role="tab" aria-selected="false">Bebidas</button>
+        </div>
+
+        <!-- Grid de produtos (preenchido via JS) -->
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SOBRE NÓS
+         ========================================================= -->
+    <section class="section section-sobre" id="sobre">
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 class="section-title" data-title-reveal>Sobre nós</h2>
+          <p class="section-subtitle" data-animate>A paixão por smash burger que virou Onix.</p>
+        </header>
+
+        <div class="sobre-grid">
+          <div class="sobre-story" data-animate>
+            <p>
+              A Onix Burguer nasceu de uma ideia simples: fazer o smash burger
+              perfeito — carne smashada no ponto, queijo derretendo, pão macio
+              e o smash que faz barulho na primeira mordida.
+            </p>
+            <p>
+              Começamos em uma cozinha pequena e hoje entregamos sabor artesanal
+              para toda a cidade. Cada burger é montado na hora, com ingredientes
+              selecionados e aquele toque especial da casa.
+            </p>
+            <p>
+              Aqui não tem pressa de fábrica: tem fogo, tempero e o compromisso
+              de chegar quentinho até você.
+            </p>
+          </div>
+
+          <div class="diferenciais" data-animate>
+            <article class="diff-card" data-animate>
+              <div class="diff-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M8 20C8 14 16 10 24 10C32 10 40 14 40 20V22H8V20Z" fill="currentColor"/><path d="M8 24H40V26C36 28 28 27 24 27C20 27 12 28 8 26V24Z" fill="currentColor"/><rect x="10" y="28" width="28" height="6" rx="2" fill="currentColor"/><path d="M8 36H40V38C40 42 32 44 24 44C16 44 8 42 8 38V36Z" fill="currentColor"/></svg>
+              </div>
+              <h3>Ingredientes selecionados</h3>
+              <p>Carne fresca, queijos de verdade e vegetais crocantes em todo pedido.</p>
+            </article>
+            <article class="diff-card" data-animate>
+              <div class="diff-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="3"/><path d="M24 14V24L32 28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Feito na hora</h3>
+              <p>Nada de prateleira: smash na chapa no momento em que você pede.</p>
+            </article>
+            <article class="diff-card" data-animate>
+              <div class="diff-icon diff-icon-motoboy" aria-hidden="true">
+                <img class="motoboy-img" src="motoboy.png?v=8" alt="Entrega quentinha" width="54" height="40">
+              </div>
+              <h3>Entrega quentinha</h3>
+              <p>Embalagem térmica e motoboys ágeis para o burger chegar no ponto.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Contadores animados -->
+        <div class="stats" id="statsBlock">
+          <div class="stat-item">
+            <span class="stat-number" data-count="5000" data-prefix="+">0</span>
+            <span class="stat-label">pedidos entregues</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="20" data-prefix="+">0</span>
+            <span class="stat-label">sabores artesanais</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="1200" data-prefix="+">0</span>
+            <span class="stat-label">avaliações 5 estrelas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="4.9" data-decimals="1">0</span>
+            <span class="stat-label">nota média</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         AVALIAÇÕES
+         ========================================================= -->
+    <section class="section section-avaliacoes" id="avaliacoes">
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 class="section-title" data-title-reveal>Avaliações</h2>
+          <p class="section-subtitle" data-animate>Quem prova, recomenda.</p>
+        </header>
+
+        <div class="testimonials-wrap" data-animate>
+          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Depoimento anterior">
+            <span aria-hidden="true">‹</span>
+          </button>
+
+          <div class="testimonials-track" id="testimonialsTrack">
+            <article class="testimonial-card is-active">
+              <div class="stars" aria-label="5 de 5 estrelas">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+              </div>
+              <p class="testimonial-text">“O Smash Onix é absurdo de bom. Chegou quentinho e o cheddar estava derretendo. Pedi de novo no mesmo dia.”</p>
+              <p class="testimonial-author">— Marina S.</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 de 5 estrelas">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+              </div>
+              <p class="testimonial-text">“Melhor smash da região. A batata é crocante e o atendimento pelo WhatsApp é super rápido.”</p>
+              <p class="testimonial-author">— Rafael T.</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 de 5 estrelas">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+              </div>
+              <p class="testimonial-text">“Combo família salvou o domingo. Todo mundo pediu repeteco. Onix virou tradição em casa.”</p>
+              <p class="testimonial-author">— Camila R.</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars" aria-label="4 de 5 estrelas">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+                <svg class="star-icon star-icon-empty" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#FFFFFF" stroke-width="1.6" d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.6L12 17.8 5.9 20.6l1.5-6.6L2.3 9.4l6.8-.7L12 2.5z"/></svg>
+              </div>
+              <p class="testimonial-text">“Milkshake de chocolate no ponto e o Smash Bacon é viciante. Só peço aqui agora.”</p>
+              <p class="testimonial-author">— Diego M.</p>
+            </article>
+          </div>
+
+          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Próximo depoimento">
+            <span aria-hidden="true">›</span>
+          </button>
+
+          <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTATO
+         ========================================================= -->
+    <section class="section section-contato" id="contato">
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 class="section-title" data-title-reveal>Contato</h2>
+          <p class="section-subtitle" data-animate">Fala com a gente — estamos prontos pro próximo smash.</p>
+        </header>
+
+        <div class="contato-grid">
+          <!-- Formulário -->
+          <form class="contato-form" id="contatoForm" data-animate novalidate>
+            <label class="form-field">
+              <span>Nome</span>
+              <input type="text" name="nome" id="formNome" required placeholder="Seu nome" autocomplete="name">
+            </label>
+            <label class="form-field">
+              <span>Telefone</span>
+              <input type="tel" name="telefone" id="formTelefone" required placeholder="(00) 00000-0000" autocomplete="tel">
+            </label>
+            <label class="form-field">
+              <span>Mensagem</span>
+              <textarea name="mensagem" id="formMensagem" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+            </label>
+            <button type="submit" class="btn-primary magnetic">
+              <span class="btn-shine" aria-hidden="true"></span>
+              Enviar mensagem
+            </button>
+          </form>
+
+          <!-- Infos + WhatsApp + mapa -->
+          <aside class="contato-info" data-animate>
+            <div class="info-block">
+              <h3>Horário</h3>
+              <p>Seg a Qui — 18h às 23h<br>Sex e Sáb — 18h às 00h<br>Domingo — 18h às 22h</p>
+            </div>
+            <div class="info-block">
+              <h3>Endereço</h3>
+              <p>Rua das Churrasqueiras, 128<br>Centro — Sua Cidade/UF<br>CEP 00000-000</p>
+            </div>
+            <div class="info-block">
+              <h3>Redes</h3>
+              <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram @onixburguer</a>
+            </div>
+            <a class="btn-whatsapp magnetic" id="btnWhatsapp" href="#" target="_blank" rel="noopener noreferrer">
+              <span class="btn-shine" aria-hidden="true"></span>
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#4A90E2" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Pedir no WhatsApp
+            </a>
+
+            <!-- Placeholder do mapa -->
+            <div class="map-placeholder" aria-label="Espaço reservado para o Google Maps">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+              <p>Mapa do Google Maps<br><small>Cole o iframe aqui depois</small></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       RODAPÉ
+       ========================================================= -->
+  <footer class="site-footer" id="rodape">
+    <!-- Ondulação suave de transição Contato -> Rodapé -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,22 C320,44 640,4 960,26 C1200,42 1360,12 1440,20 L1440,54 L0,54 Z" fill="var(--azul-escuro)"/></svg>
+    </div>
+
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo logo-footer" aria-label="Onix Burguer">
+          <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M8 18C8 13 15 10 24 10C33 10 40 13 40 18V20H8V18Z" fill="#FFFFFF"/>
+            <path d="M8 21C11 23 14 20 17 22C20 24 22 20 24 22C26 24 28 20 31 22C34 24 37 20 40 22V24H8V21Z" fill="#FFFFFF"/>
+            <rect x="9" y="24.5" width="30" height="5" rx="2.5" fill="#FFFFFF"/>
+            <path d="M8 31H40V34C40 37 33 39 24 39C15 39 8 37 8 34V31Z" fill="#FFFFFF"/>
+          </svg>
+          <span class="logo-text">Onix Burguer</span>
+        </a>
+        <p>Smash burger artesanal, feito na hora e entregue quentinho.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Links rápidos">
+        <h3>Links</h3>
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer-social">
+        <h3>Redes</h3>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" id="footerWhatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; <span id="year"></span> Onix Burguer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       CARRINHO — botão flutuante + drawer
+       ========================================================= -->
+  <button class="cart-fab" id="cartFab" aria-label="Abrir carrinho" hidden>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="9" cy="21" r="1"/>
+      <circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+    </svg>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <header class="cart-header">
+      <h2>Seu pedido</h2>
+      <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">&times;</button>
+    </header>
+
+    <div class="cart-body" id="cartBody">
+      <!-- Preenchido via JS -->
+    </div>
+
+    <footer class="cart-footer" id="cartFooter">
+      <label class="cart-obs">
+        <span>Observações do pedido</span>
+        <textarea id="cartObs" rows="2" placeholder="Ex.: sem cebola, ponto da carne..."></textarea>
+      </label>
+      <div class="cart-totals">
+        <div class="cart-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">R$ 0,00</strong>
+        </div>
+        <div class="cart-row cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+      </div>
+      <button class="btn-primary btn-checkout magnetic" id="btnCheckout">
+        <span class="btn-shine" aria-hidden="true"></span>
+        Finalizar pedido
+      </button>
+    </footer>
+  </aside>
+
+  <!-- Toast de feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript externo -->
+  <script src="script.js?v=13"></script>
+</body>
+</html>
